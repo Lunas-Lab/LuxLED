@@ -1,17 +1,13 @@
 #include "WifiConnect.h"
+#include "CaptivePortal.h"
 
 #include <Arduino.h>
 
 
 void setup() {
-  Serial.begin(115200);
-  delay(10);
-  wifiSetup();
+  captive::setup();
 }
 
 void loop() {
-  digitalWrite(2, HIGH);
-  delay(50);
-  digitalWrite(2, LOW);
-  delay(50);
+  captive::loop();
 }
