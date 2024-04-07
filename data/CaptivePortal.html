@@ -1,15 +1,69 @@
-<!DOCTYPE html> <html>
-    <head>
-      <title>ESP32 Captive Portal</title>
-      <style>
-        body {background-color:#06cc13;}
-        h1 {color: white;}
-        h2 {color: white;}
-      </style>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-      <h1>Hello World!</h1>
-      <h2>This is a captive portal example. All requests will be redirected here </h2>
-    </body>
-  </html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>ESP32 Captive Portal</title>
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+        }
+
+        label {
+            font-size:x-large;
+        }
+
+        #page-flex {
+            display: flex;
+            flex-flow: column nowrap;
+            height: 100vh;
+        }
+
+        #header {
+            height: 100px;
+            text-align: center;
+        }
+
+        #main-body {
+            display: flex;
+            flex-flow: row nowrap;
+            height: 100%;
+            flex: 1 1 auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #name-panel {
+            display: flex;
+            flex-flow: row wrap;
+            width: fit-content;
+        }
+
+        #name-input {
+            margin-left: 1vw;
+            border-radius: 10px;
+        }
+
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="page-flex">
+        <div id="header">
+            <h1>Welcome to device setup</h1>
+        </div>
+        <div id="main-body">
+            <div class="functional-panels" id="name-panel">
+                <label for="name-input">Device Name:</label>
+                <input type="text" id="name-input" name="name-input">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
