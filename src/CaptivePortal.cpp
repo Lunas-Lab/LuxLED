@@ -58,7 +58,7 @@ void startSoftAccessPoint(const char *ssid, const char *password, const IPAddres
 #define WIFI_CHANNEL 6
 
 	// Set the WiFi mode to access point and station
-	WiFi.mode(WIFI_MODE_AP);
+	WiFi.mode(WIFI_AP_STA);
 
 	// Define the subnet mask for the WiFi network
 	const IPAddress subnetMask(255, 255, 255, 0);
@@ -138,7 +138,7 @@ void setup() {
 		;
 
 	// Print a welcome message to the Serial port.
-	Serial.println("\n\nCaptive Test, V0.5.0 compiled " __DATE__ " " __TIME__ " by CD_FER");  //__DATE__ is provided by the platformio ide
+	Serial.println("\n\nCaptive Test, V0.5.0 compiled " __DATE__ " " __TIME__ " by CD_FER (Modified by Lunas-Lab)");  //__DATE__ is provided by the platformio ide
 	Serial.printf("%s-%d\n\r", ESP.getChipModel(), ESP.getChipRevision());
 
 	startSoftAccessPoint(ssid, password, localIP, gatewayIP);
