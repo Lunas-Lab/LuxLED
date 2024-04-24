@@ -59,10 +59,20 @@
             border-radius: 10px;
         }
     </style>
+    <script>
+        function onLoad() { // Sets all functional panels to hidden besides the first
+            panels = document.getElementsByClassName("functional-panels");
+
+            for (const element of panels) {
+                element.style.display = "none";
+            }
+            panels[0].style.display = "flex"; // TODO change to ID when intro page is made
+        }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body onload="onLoad()">
     <div id="page-flex">
         <div id="header">
             <h1>Welcome to device setup</h1>
